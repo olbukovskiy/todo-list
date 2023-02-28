@@ -19,6 +19,6 @@
   position: relative;
   margin: 0 auto;
   padding: 24px 36px;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: #fff;
 }
