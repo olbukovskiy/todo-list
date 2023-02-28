@@ -1,0 +1,35 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.label-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.text-input {
+  height: 20px;
+  width: 300px;
+  padding: 4px 18px;
+  border-color: grey;
+}
+
+.bordered {
+  border-color: red;
+}
+
+.error-message {
+  position: absolute;
+  font-size: 14px;
+  color: red;
+}
+
+.button {
+  align-self: flex-end;
+  padding: 6px 12px;
+}
