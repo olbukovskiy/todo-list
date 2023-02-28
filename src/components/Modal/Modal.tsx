@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
 
-import css from "./Modal.module.css";
+import "./Modal.css";
 
 type Props = {
   onClose: () => void;
@@ -42,8 +42,8 @@ export const Modal: React.FunctionComponent<Props> = function ({
   };
 
   return createPortal(
-    <div className={css.backdrop} onClick={onBackdropClickHandler}>
-      <div className={css.modal}>{children}</div>
+    <div className="backdrop" onClick={onBackdropClickHandler}>
+      <div className="modal">{children}</div>
     </div>,
     modalRoot
   );

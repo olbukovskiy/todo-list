@@ -12,10 +12,13 @@
 }
 
 .modal {
-  height: 200px;
+  max-height: 600px;
+  height: 40vh;
+  min-height: 200px;
   width: 400px;
   position: relative;
   margin: 0 auto;
   padding: 24px 36px;
+  overflow-y: scroll;
   background-color: #fff;
 }

@@ -5,9 +5,9 @@ import { toggleStatus } from "../../redux/todoSlice";
 import hooks from "../hooks/redux-hooks";
 import { Modal } from "../Modal/Modal";
 
-import "./TodoTableItem.css";
+import "./TodoListItem.css";
 
-const TodoTableItem: React.FunctionComponent<TodoItem> = ({
+export const TodoListItem: React.FunctionComponent<TodoItem> = ({
   id,
   title,
   description,
@@ -22,16 +22,15 @@ const TodoTableItem: React.FunctionComponent<TodoItem> = ({
   const closeModal = () => setModalOpen(false);
 
   return (
-    <>
-      <tr onClick={openModal} id={id}>
-        <td>{id}</td>
-        <td>{cutStr(title)}</td>
-        <td>{cutStr(description)}</td>
+    <li className="list-item">
+      <div className="list-content-wrapper" onClick={openModal}>
+        <p>{id}</p>
+        <p>{cutStr(title)}</p>
+        <p>{cutStr(description)}</p>
+      </div>
 
-        <td>
-          <input type="checkbox" checked={status} onChange={handleChange} />
-        </td>
-      </tr>
+      <input type="checkbox" checked={status} onChange={handleChange} />
+
       {modalOpen && (
         <Modal onClose={closeModal}>
           <div>
@@ -47,8 +46,6 @@ const TodoTableItem: React.FunctionComponent<TodoItem> = ({
           </div>
         </Modal>
       )}
-    </>
+    </li>
   );
 };
-
-export default TodoTableItem;
