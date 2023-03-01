@@ -29,7 +29,17 @@ export const TodoListItem: React.FunctionComponent<TodoItem> = ({
         <p>{cutStr(description)}</p>
       </div>
 
-      <input type="checkbox" checked={status} onChange={handleChange} />
+      <label
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        <input type="checkbox" checked={status} onChange={handleChange} />
+      </label>
 
       {modalOpen && (
         <Modal onClose={closeModal}>
