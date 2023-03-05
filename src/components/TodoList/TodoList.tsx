@@ -1,6 +1,6 @@
 import { selectTodos } from "../../redux/selectors";
 import hooks from "../hooks/redux-hooks";
-import { TodoListItem } from "../TodoListItem/TodoListItem";
+import TodoListItem from "../TodoListItem/TodoListItem";
 import "./TodoList.css";
 
 const TodoList: React.FunctionComponent = () => {

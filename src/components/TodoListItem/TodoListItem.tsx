@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import cutStr from "../../helpers/functions";
 import { TodoItem } from "../../helpers/types";
 import { toggleStatus } from "../../redux/todoSlice";
@@ -7,7 +7,7 @@ import { Modal } from "../Modal/Modal";
 
 import "./TodoListItem.css";
 
-export const TodoListItem: React.FunctionComponent<TodoItem> = ({
+const TodoListItem: React.FunctionComponent<TodoItem> = ({
   id,
   title,
   description,
@@ -59,3 +59,5 @@ export const TodoListItem: React.FunctionComponent<TodoItem> = ({
     </li>
   );
 };
+
+export default React.memo(TodoListItem);
